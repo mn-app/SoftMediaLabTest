@@ -1,0 +1,11 @@
+.wage-type-input-container {
+	text-align: left;
+	.wage-type-input-item {
+		display: flex;
+		font-weight: 500;
+		font-size: 1.1rem;
+		> * {
+			margin-right: 4px;
+		}
+	}
+}

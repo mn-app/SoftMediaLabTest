@@ -1,0 +1,32 @@
+.radio-container {
+	input {
+		display: none;
+	}
+	display: flex;
+	align-items: center;
+	.radio-outer {
+		margin-right: 10px;
+		width: 13px;
+		height: 13px;
+		border: 1px solid #a1a1a1;
+		border-radius: 50%;
+		position: relative;
+	}
+	.radio-inner {
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		padding: 2px;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background-color: transparent;
+		transition: background-color 0.3s;
+	}
+}
+
+.radio-container.selected {
+	.radio-inner {
+		background-color: rgb(56, 52, 52);
+	}
+}

@@ -1,0 +1,39 @@
+$bck-color: #5e6cab;
+.info-container {
+	position: relative;
+	width: min-content;
+	font-size: 1rem;
+	.info-icon {
+		cursor: pointer;
+		color: gray;
+	}
+	.info-popup {
+		position: absolute;
+		top: 1rem;
+		left: 0.5rem;
+		z-index: 10;
+		display: none;
+		.info-popup-tail {
+			background-color: $bck-color;
+			clip-path: polygon(0 0, 0% 100%, 100% 100%);
+			height: 20px;
+			width: 15px;
+		}
+		.info-popup-content {
+			background-color: $bck-color;
+			color: white;
+			padding: 16px 10px;
+			text-align: left;
+			width: 250px;
+		}
+	}
+
+	.info-popup.opened,
+	.info-icon:hover ~ .info-popup {
+		display: block;
+	}
+
+	.info-icon:hover {
+		color: $bck-color;
+	}
+}

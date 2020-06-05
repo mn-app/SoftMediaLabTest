@@ -1,0 +1,54 @@
+@import '../colors.scss';
+
+.toggle-container {
+	display: flex;
+	margin: 10px 0;
+	.toggle-wrapper {
+		width: 30px;
+		height: 20px;
+		background-color: #e8e9e3;
+		border-radius: 20px;
+		position: relative;
+		transition: background-color 0.5s;
+		margin: 0 4px;
+		cursor: pointer;
+		.toggle-toggle {
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			background-color: white;
+			border-radius: 50%;
+			transition: left 0.5s;
+		}
+	}
+	.toggle-label-on,
+	.toggle-label-off {
+		font-size: 12px;
+		font-weight: 500;
+		transition: color 0.5s;
+	}
+
+	.toggle-label-on {
+		color: $gray-text-color;
+	}
+	.toggle-label-off {
+		color: $black-text-color;
+	}
+}
+
+.toggle-container.on {
+	.toggle-wrapper {
+		background-color: #f3a843;
+		.toggle-toggle {
+			left: 12px;
+		}
+	}
+	.toggle-label-on {
+		color: $black-text-color;
+	}
+	.toggle-label-off {
+		color: $gray-text-color;
+	}
+}
